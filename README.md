@@ -52,20 +52,23 @@ LFFExcelData *ds = [[LFFExcelData alloc] init];
 
 4. 使用数据类 LFFExcelData 的实例对象 来生成 表格对象 (这里,如果设置 ds.anction == YES , 就要实现代理)
 ```
-代理的设置
+实例化表格对象
+   LFFExcelComponent *lffexcelComponent = [[LFFExcelComponent alloc] initWithdata:ds];
+    lffexcelComponent.delegate  = self;
+    [self.view addSubview:lffexcelComponent];
+
+```
+
+
+代理的设置 + 方法
+```
+
 @interface FlowDetailViewController ()<LFFExcelDelegate>
 
 #pragma mark LFFExcelDelegate
 -(void)btnAction:(NSInteger)index{
     //这里处理事件操作
 }
-```
-```
-实例化表格对象
-   LFFExcelComponent *lffexcelComponent = [[LFFExcelComponent alloc] initWithdata:ds];
-    lffexcelComponent.delegate  = self;
-    [self.view addSubview:lffexcelComponent];
-
 ```
 
 
