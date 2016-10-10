@@ -24,22 +24,19 @@ LFFExcelData *ds = [[LFFExcelData alloc] init];
                @[@"",@"",@""],@[@"",@"",@""],@[@"",@"",@""],@[@"",@"",@""],
                nil];
     
+       //设置表格的x
+    ds.excelX = 10;
+    //设置表格的y
+    ds.excelY = 100;
+    //设置表格的单元格高度
+    ds.cellHeight = 40;
+    
     //设置表格标题背景色
     ds.titleColor = customBlue;
     //设置表格单元格颜色
     ds.cellColor = customGray;
     //设置单元格网格线颜色
     ds.lineColor = customLineBlue;
-    
-
-    //设置表格的x
-    ds.excelX = 10;
-    //设置表格的y
-    ds.excelY = _infoBgVIew.y+_infoBgVIew.height;
-    //设置表格的宽度
-    ds.excelWidth = boundsWidth-2*ds.excelX;
-    //设置表格的单元格高度
-    ds.cellHeight = 40;
     
  
 ```
